@@ -1,0 +1,36 @@
+name: Profile README
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - profile/README.md
+      - .github/workflows/profile-readme.yml
+  pull_request:
+    paths:
+      - profile/README.md
+      - .github/workflows/profile-readme.yml
+
+permissions:
+  contents: read
+
+jobs:
+  lint-and-links:
+    name: Lint and link check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Lint profile README
+        uses: DavidAnson/markdownlint-cli2-action@v19
+        with:
+          globs: profile/README.md
+
+      - name: Check links in profile README
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --verbose --no-progress profile/README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

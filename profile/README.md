@@ -1,7 +1,12 @@
 # Queer Global
 
-Queer Global is building a place to share trusted resources for the least represented people in the LGBTQIA+ community.
+Queer Global is building a place to share trusted resources for the least
+represented people in the LGBTQIA+ community.
 
-- **Live placeholder:** [https://queerglobal.com](https://queerglobal.com)
-- **Intended app:** [qg-frontend-v2](https://github.com/QueerGlobal/qg-frontend-v2)
-- **Docs:** [qg-docs](https://github.com/QueerGlobal/qg-docs)
+The public site and app are not launched yet. For now, follow development in
+these repositories:
+
+- [qg-frontend-v2](https://github.com/gk-queer-global/qg-frontend-v2)
+  (intended application, work in progress)
+- [qg-docs](https://github.com/gk-queer-global/qg-docs)
+  (project documentation)
